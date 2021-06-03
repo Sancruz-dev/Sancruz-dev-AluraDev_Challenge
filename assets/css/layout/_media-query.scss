@@ -14,7 +14,7 @@
     width: 25%;
     height: 100%;
     padding: 2rem;
-    border-radius: 8px;
+    border-top-left-radius: 8px;
     background-color: #2D415B;
     transition: .5s;
   }
@@ -24,15 +24,15 @@
   { 
     cursor: pointer; 
     flex-direction: column; 
-    transition: .3s;
     padding: 1.2rem 1.1rem;
     border-radius: 18px;
+    transition: .3s;
 
     &:hover
     { background: #5080fb13; }
 
     &:active
-    { background: rgba(80, 129, 251, 0.16); }
+    { background: rgba(80, 129, 251, 0.16); transition: 0s;}
 
     &.active
     { padding-right: .7rem; }
@@ -137,31 +137,46 @@
   { width: 40%; top: 7.5rem; }
   
   .header .campo-busca { 
+    position: absolute;
     width: 100%;
-    transform: translateX(-30rem); 
+    
+    transform: translateX(-60rem); 
     transition: .5s;
     margin: 0 .3rem 0 0;
+    transition-delay: .3s;
     
     &.active
-    { transform: translateX(0); display: flex; transition: .5s;}
+    { 
+      width: 18rem;
+      transform: translateX(0); 
+      display: flex;
+      transition: .5s;
+    }
   }
 
   .img-logo { 
     position: relative;
     transform: translateY(0);
     transition: .3s;
+    transition-delay: .4s;
 
     &.active
-    { display: none; transform: translateY(5px); transition: .3s; }
+    { 
+      transform: translateY(-8rem); 
+      transition: .3s; 
+    }
   }
 
   .header .nav .fa-search { 
+    transform: translateY(0);
     font-size: 1.6em; 
     cursor: pointer; 
     margin-right: 1rem;
-    
+    transition: .3s;
+    transition-delay: .2s;
+
     &.active
-    { display: none; }
+    { transform: translateY(-8rem);}
   }
 
   .header .nav #nav-toggle 
