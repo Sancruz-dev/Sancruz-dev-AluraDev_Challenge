@@ -139,7 +139,6 @@
   .header .campo-busca { 
     position: absolute;
     width: 100%;
-    
     transform: translateX(-60rem); 
     transition: .5s;
     margin: 0 .3rem 0 0;
@@ -147,7 +146,7 @@
     
     &.active
     { 
-      width: 18rem;
+      width: 66%;
       transform: translateX(0); 
       display: flex;
       transition: .5s;
@@ -171,7 +170,7 @@
     transform: translateY(0);
     font-size: 1.6em; 
     cursor: pointer; 
-    margin-right: 1rem;
+    margin-right: -4rem;
     transition: .3s;
     transition-delay: .2s;
 
@@ -195,10 +194,10 @@
 {
   html
   { font-size: 85%; }
-
+  
   .nav__menu
   { width: 50%; }
-
+  
   #nav-toggle span
   {  
     width: 28px;
@@ -209,13 +208,22 @@
 
 @media (max-width: 375px) 
 {
+  
+  #nav-toggle span
+  { width: 24px; height: 3px; }
+
+  #nav-toggle.active span:nth-child(2) 
+  { transform: rotate(313deg); right: 2px; }
+
+  .header .nav .fa-search
+  { font-size: 1.3em; margin-right: -1rem;}
+
   .nav__menu
   { width: 65%; }
 
   .sec-codigo-edit .container-config-edit .div-personaliza
-  {
-    flex-direction: column;
-  }
+  { flex-direction: column; }
+
   .sec-codigo-edit .container-config-edit .div-personaliza .linguagens
   { margin-right: 0; }
 } 
