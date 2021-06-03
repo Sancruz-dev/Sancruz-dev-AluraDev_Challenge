@@ -1,0 +1,50 @@
+.menu-nav
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 31.55%;
+}
+
+.menu-nav li a
+{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.menu-nav li i
+{
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #5081FB;
+    border-radius: 16px;
+    margin-right: 16px;
+}
+
+.menu-nav li:nth-child(2),
+.header .nav .nav__menu li:nth-child(2)
+{
+    opacity: .5;
+    transition: .2s;
+
+    & i
+    { background: #5080fb44; transition: .2s; }
+
+    &:hover
+    { opacity: .7; 
+        
+        & i
+        { background: #5081FB; }
+    }
+    &:active
+    { opacity: 1;
+  
+        & i
+        { background: #5081FB; }
+    }
+}

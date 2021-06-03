@@ -1,0 +1,161 @@
+.sec-codigo-edit
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.sec-codigo-edit .space-codeditor
+{ width: 100%; margin-right: 2rem; }
+
+.sec-codigo-edit .space-codeditor .backbox-edit-secondary
+{
+    position: relative;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    background: #6BD1FF;
+}
+
+.sec-codigo-edit .space-codeditor .backbox-edit-secondary .backbox-edit-main
+{
+    width: 100%; height: 100%;
+    background: #141414;
+    border-radius: 8px; 
+    padding: 1rem;
+    box-shadow: 0 0 40px rgba(0,0,0,0.24);
+}
+
+.sec-codigo-edit .space-codeditor .backbox-edit-secondary .backbox-edit-main .window-controls
+{ height: 32px; }
+
+.sec-codigo-edit .space-codeditor .backbox-edit-secondary .backbox-edit-main .window-controls span::before
+{
+    width: 12px; height: 12px;
+    position: absolute;
+    content: '';
+    background: #FF5F56;
+    border-radius: 50%;
+}
+.sec-codigo-edit .space-codeditor .backbox-edit-secondary .backbox-edit-main .window-controls span::after
+{
+    position: absolute;
+    content: '';
+    background: #FFBD2E;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.sec-codigo-edit .space-codeditor .backbox-edit-secondary .backbox-edit-main .window-controls span:nth-child(1)::before
+{
+    width: 12px; height: 12px;
+    position: absolute;
+    content: '';
+    background: #27C93F;
+    border-radius: 50%;
+    margin-left: 40px;
+    
+}
+
+.sec-codigo-edit .space-codeditor .backbox-edit-secondary .backbox-edit-main textarea
+{
+    width: 100%; height: calc(100% - 1rem);
+    font-family: 'Roboto Mono';
+    font-size: 14px;
+    line-height: 18.46px;
+    color: #d2d2d2;
+    background: transparent;
+    resize: none;
+}
+
+.sec-codigo-edit .space-codeditor .btn-verhighlight
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 1.01em;
+    color: #fff;
+    background: #5080fb13;
+    border-radius: 8px;
+    cursor: pointer; 
+    text-decoration: none;
+
+    &:hover
+    { transition: 0.3s; background: rgba(80, 129, 251, 0.16); }
+    
+    &:active
+    { outline: none; border: 3px solid rgba(80, 129, 251, 0.24); }
+
+    &:focus
+    { background: rgba(80, 129, 251, 0.24); }
+}
+
+/* start Configurações do projeto */
+
+.sec-codigo-edit .container-config-edit
+{ display: flex; flex-direction: column; }
+
+.sec-codigo-edit .container-config-edit h6
+{ margin-bottom: 1rem; }
+
+.sec-codigo-edit .container-config-edit input
+{ margin-bottom: 1rem; padding: 1rem; }
+
+.sec-codigo-edit .container-config-edit textarea
+{ margin-bottom: 3rem; padding: 1rem; height: 5rem; resize: vertical;}
+
+.sec-codigo-edit .container-config-edit textarea::placeholder
+{ color: #d1d1d1; }
+
+.sec-codigo-edit .container-config-edit .div-personaliza .linguagens
+{ width: 100%; }
+
+.sec-codigo-edit .container-config-edit .outline
+{
+    width: calc(100% - 1rem);
+    height: 2.5rem;
+    margin: 1rem 0;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    padding: .5rem;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover { box-shadow: 0 0px 5px #fff; }
+}
+
+.sec-codigo-edit .container-config-edit .outline .cor
+{
+    width: 100%; height: 100%;
+    background: #6BD1FF;
+    border-radius: 4px;
+}
+
+.sec-codigo-edit .container-config-edit .salvar-projeto
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    background: #5081FB;
+    color: #010b16;
+    cursor: pointer;
+    font-weight: 500;
+    
+    &:hover
+    { transition: 0.3s; background: #7BA4FC; }
+    
+    &:active
+    { border: 3px solid rgba(80, 129, 251, 0.72); }
+
+    &:focus
+    { background: #96B9FD; }
+}

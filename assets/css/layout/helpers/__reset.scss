@@ -1,0 +1,109 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Inter:wght@100;200;300;400&display=swap');
+
+*
+{ font-family: 'Inter';}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	scroll-behavior: smooth; /* adicionado */
+}
+
+main
+{ margin: 2.5rem 2rem 0 2rem;  display: flex; flex-direction: row;}
+
+section
+{
+	display: flex;
+}
+
+h1, h2, h3, h4, h5, h6
+{ 
+	text-transform: uppercase;  
+	font-weight: 200; 
+	color: #fff; 
+	letter-spacing: .3rem;
+}
+h6 { font-size: .75em; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	background: #051D3B;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input, textarea, select, button
+{
+	height: 3.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+	padding: .9rem;
+    color: #ffffff;
+    font-size: 1.03em;
+    font-weight: 200;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.24);
+	transition: 0.3s;
+
+    &:focus
+    { transition: 0.3s; background: rgba(255, 255, 255, 0.315); }
+}
+
+input::placeholder,
+select::placeholder
+{ color: #d1d1d1; }
+
+input, textarea, select
+{ border: none; outline: none;}
+
+ul, li 
+{padding: 0; list-style: none; }
+
+a
+{ text-decoration: none; }
+
+button
+{ border: none; }
+
+p, .fa
+{ color: #fff; font-weight: 300; font-family: 'Inter';}

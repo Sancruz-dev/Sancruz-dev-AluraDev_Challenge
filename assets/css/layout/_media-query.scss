@@ -1,0 +1,215 @@
+@media screen and (max-width: 960px){
+  aside.menu-nav
+  { display: none; }
+
+  .nav__menu
+  {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    top: 7rem;
+    right: -100%;
+    width: 25%;
+    height: 100%;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: #2D415B;
+    transition: .5s;
+  }
+
+  /* === INICIO TOGGLE HAMBURGUER === */
+  #nav-toggle
+  { 
+    cursor: pointer; 
+    flex-direction: column; 
+    transition: .3s;
+    padding: 1.2rem 1.1rem;
+    border-radius: 18px;
+
+    &:hover
+    { background: #5080fb13; }
+
+    &:active
+    { background: rgba(80, 129, 251, 0.16); }
+
+    &.active
+    { padding-right: .7rem; }
+
+  }
+
+  #nav-toggle span
+  {
+      position: relative;
+      width: 28px;
+      height: 4px;
+      display: flex;
+      margin-bottom: 6px;
+      border-radius: 1.2px;
+      background:#fff ;
+      transition: .5s;
+
+      &:nth-child(1) 
+      { transform-origin: left; }
+
+      &:nth-child(2) 
+      { transform-origin: center; }
+
+      &:nth-child(3) 
+      { transform-origin: left; margin-bottom: 0;}
+  }
+
+  #nav-toggle.active span:nth-child(1) 
+  { transform: rotate(46deg); left: 2px; }
+
+  #nav-toggle.active span:nth-child(2) 
+  { transform: rotate(316deg); right: 3px; }
+
+  #nav-toggle.active span:nth-child(3) 
+  { transform: scaleX(0); }
+
+  /* === FIM TOGGLE HAMBURGUER === */
+  
+
+  .nav__menu ul li a
+  { display: flex; align-items: center; }
+  
+  .divisao-menu
+  {  
+    position: relative;  
+    margin-top: 1rem;
+    padding: .8px 6.8rem;
+    background-color: #3a4f69;
+  }
+
+  .header .img-perfil, .header .img-nome-perfil p
+  { display: none; }
+
+  .header .nav .nav__menu .img-nome-perfil
+  { margin: 2.5rem 0 0 1rem; }
+  
+  .header .nav .nav__menu .img-nome-perfil .img-perfil,
+  .header .nav .nav__menu .img-nome-perfil .nome
+  { display: block; }
+}
+
+@media screen and (min-width: 960px){
+  #nav-toggle
+  { display: none; }
+
+  .header .nav .nav__menu .img-nome-perfil .img-perfil,
+  .header .nav .nav__menu .img-nome-perfil .nome
+  { display: none; }
+
+  .nav__menu
+  { display: none; }
+}
+
+@media (max-width: 768px) 
+{
+  .nav__menu
+  { width: 35%; }
+
+  .sec-codigo-edit
+  { flex-direction: column; }
+
+  .sec-codigo-edit .container-config-edit
+  { margin-top: 3rem; }
+
+  .sec-codigo-edit .container-config-edit .div-personaliza
+  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .sec-codigo-edit .container-config-edit .div-personaliza .linguagens
+  { margin-right: 1rem; }
+
+
+}
+
+@media (max-width: 600px) 
+{
+  .nav__menu
+  { width: 40%; top: 7.5rem; }
+  
+  .header .campo-busca { 
+    width: 100%;
+    transform: translateX(-30rem); 
+    transition: .5s;
+    margin: 0 .3rem 0 0;
+    
+    &.active
+    { transform: translateX(0); display: flex; transition: .5s;}
+  }
+
+  .img-logo { 
+    position: relative;
+    transform: translateY(0);
+    transition: .3s;
+
+    &.active
+    { display: none; transform: translateY(5px); transition: .3s; }
+  }
+
+  .header .nav .fa-search { 
+    font-size: 1.6em; 
+    cursor: pointer; 
+    margin-right: 1rem;
+    
+    &.active
+    { display: none; }
+  }
+
+  .header .nav #nav-toggle 
+  { display: flex; align-items: center; }
+
+} 
+
+@media (min-width: 600px) 
+{
+  .header .nav .fa-search
+  { display: none; }
+}
+
+
+@media (max-width: 480px)
+{
+  html
+  { font-size: 85%; }
+
+  .nav__menu
+  { width: 50%; }
+
+  #nav-toggle span
+  {  
+    width: 28px;
+    height: 4px;
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 375px) 
+{
+  .nav__menu
+  { width: 65%; }
+
+  .sec-codigo-edit .container-config-edit .div-personaliza
+  {
+    flex-direction: column;
+  }
+  .sec-codigo-edit .container-config-edit .div-personaliza .linguagens
+  { margin-right: 0; }
+} 
+
+/* 
+
+
+@media (max-width: 320px)
+{
+
+} 
+*/

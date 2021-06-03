@@ -1,0 +1,37 @@
+@import "../../estilo.scss";
+
+.header .img-perfil
+{ background: url(../../../img/perfil.jpg); background-size: 100%; }
+
+
+.menu-nav li:nth-child(2),
+.header .nav .nav__menu li:nth-child(2)
+{
+    opacity: 1; 
+
+    & i
+    { background: #5081FB; }
+}
+
+.menu-nav li:nth-child(1),
+.header .nav .nav__menu li:nth-child(1)
+{
+    opacity: .5;
+    transition: .2s;
+
+    & i
+    { background: #5080fb44; transition: .2s; }
+
+    &:hover
+    { opacity: .7; 
+        
+        & i
+        { background: #5081FB; }
+    }
+    &:active
+    { opacity: 1;
+  
+        & i
+        { background: #5081FB; }
+    }
+}
