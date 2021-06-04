@@ -189,7 +189,6 @@
   { display: none; }
 }
 
-
 @media (max-width: 480px)
 {
   html
@@ -204,6 +203,9 @@
     height: 4px;
     margin-bottom: 6px;
   }
+
+  .sec-codigo-edit .space-codeditor .backbox-edit-secondary
+  { height: 55vh; }
 }
 
 @media (max-width: 375px) 
