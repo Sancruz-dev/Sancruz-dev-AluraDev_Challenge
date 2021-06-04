@@ -71,32 +71,40 @@ table {
 	border-spacing: 0;
 }
 
-input, textarea, select, button
+option
+{ 
+	cursor: pointer; 
+	font-weight: 200; 
+	transition: .3s;
+	text-transform: capitalize; 
+	font-size: .8em;
+}
+
+input, textarea, button
 {
-	height: 3.5rem;
-    display: flex;
+	display: flex;
     justify-content: flex-start;
     align-items: center;
+	height: 3.5rem;
 	padding: .9rem;
+    font-weight: 200;
     color: #ffffff;
     font-size: 1.03em;
-    font-weight: 200;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.24);
+    background: rgba(255, 255, 255, 0.16);
 	transition: 0.3s;
 
     &:hover
-    { background: rgba(255, 255, 255, 0.315); }
+    { background: rgba(255, 255, 255, 0.24); }
 
     &:focus
-    { background: rgba(255, 255, 255, 0.315); }
+    { background: rgba(255, 255, 255, 0.24); }
 }
 
-input::placeholder,
-select::placeholder
+input::placeholder 
 { color: #d1d1d1; }
 
-input, textarea, select
+input, textarea
 { border: none; outline: none;}
 
 ul, li 
@@ -106,7 +114,7 @@ a
 { text-decoration: none; }
 
 button
-{ border: none; }
+{ border: none;  cursor: pointer;}
 
 p, .fa
 { color: #fff; font-weight: 300; font-family: 'Inter';}

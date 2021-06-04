@@ -76,27 +76,10 @@
                     <div class="window-controls">
                         <span></span><span></span>
                     </div>
-                    <textarea name="" id="editor"></textarea>
+                    <textarea name="" id="editor">const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj) const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res) const unfold = (f, seed) => { const go = (f, seed, acc) => { const res = f(seed) return res ? go(f, res[1], acc.concat([res[0]])) : acc } return go(f, seed, []) }</textarea>
                 </div>
             </div>
-            <button class="btn-verhighlight" href="">Visualizar com o highlight</button>
-        </div>
-        <div class="container-config-edit">
-            <h6>Seu projeto</h6>
-            <input type="text" name="" id="" placeholder="Nome do seu projeto">
-            <textarea name="" id="" placeholder="Descrição do projeto"></textarea>
 
-            <h6>Persolnalização</h6>
-            <select name="linguagens" id="linguagens">
-                <option value="Javascript">Javascript</option>
-                <option value="Html">Html</option>
-            </select>
-
-            <div class="outline">
-                <div class="cor"></div>
-            </div>
-            
-            <button class="salvar-projeto">Salvar projeto</button>
         </div>
     </section>
 

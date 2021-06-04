@@ -1,9 +1,9 @@
 .sec-codigo-edit
 {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
 }
 
 .sec-codigo-edit .space-codeditor
@@ -11,92 +11,92 @@
 
 .sec-codigo-edit .space-codeditor .backbox-edit-secondary
 {
-    position: relative;
-    height: 44vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem 2rem;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-    background: #6BD1FF;
+	position: relative;
+	height: 44vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 3rem 2rem;
+	margin-bottom: 2rem;
+	border-radius: 8px;
+	background: #6BD1FF;
 }
 
 .sec-codigo-edit .space-codeditor .backbox-edit-secondary .backbox-edit-main
 {
-    width: 100%; height: 100%;
-    background: #141414;
-    border-radius: 8px; 
-    padding: 1rem;
-    box-shadow: 0 0 40px rgba(0,0,0,0.24);
+	width: 100%; height: 100%;
+	background: #141414;
+	border-radius: 8px; 
+	padding: 1rem 0;
+	box-shadow: 0 0 40px rgba(0,0,0,0.24);
 }
 
 .sec-codigo-edit .space-codeditor .backbox-edit-secondary .backbox-edit-main .window-controls
-{ height: 32px; }
+{ height: 32px; margin-left: 1rem;}
 
 .sec-codigo-edit .space-codeditor .backbox-edit-secondary .backbox-edit-main .window-controls span::before
 {
-    width: 12px; height: 12px;
-    position: absolute;
-    content: '';
-    background: #FF5F56;
-    border-radius: 50%;
+	width: 12px; height: 12px;
+	position: absolute;
+	content: '';
+	background: #FF5F56;
+	border-radius: 50%;
 }
 .sec-codigo-edit .space-codeditor .backbox-edit-secondary .backbox-edit-main .window-controls span::after
 {
-    position: absolute;
-    content: '';
-    background: #FFBD2E;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    margin-left: 20px;
+	position: absolute;
+	content: '';
+	background: #FFBD2E;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	margin-left: 20px;
 }
 
 .sec-codigo-edit .space-codeditor .backbox-edit-secondary .backbox-edit-main .window-controls span:nth-child(1)::before
 {
-    width: 12px; height: 12px;
-    position: absolute;
-    content: '';
-    background: #27C93F;
-    border-radius: 50%;
-    margin-left: 40px;
-    
+	width: 12px; height: 12px;
+	position: absolute;
+	content: '';
+	background: #27C93F;
+	border-radius: 50%;
+	margin-left: 40px;
+	
 }
 
 .sec-codigo-edit .space-codeditor .backbox-edit-secondary .backbox-edit-main textarea
 {
-    width: 100%; height: calc(100% - 1rem);
-    font-family: 'Roboto Mono';
-    font-size: 14px;
-    line-height: 18.46px;
-    color: #d2d2d2;
-    background: transparent;
-    resize: none;
+	width: 100%; height: calc(100% - 1rem);
+	font-family: 'Roboto Mono';
+	font-size: 14px;
+	line-height: 18.46px;
+	color: #d2d2d2;
+	background: transparent;
+	resize: none;
+	padding: 0 1rem;
 }
 
 .sec-codigo-edit .space-codeditor .btn-verhighlight
 {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-weight: 300;
-    font-size: 1.01em;
-    color: #fff;
-    background: #5080fb13;
-    border-radius: 8px;
-    cursor: pointer; 
-    text-decoration: none;
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	font-weight: 300;
+	font-size: 1.01em;
+	color: #fff;
+	background: #5080fb13;
+	border-radius: 8px;
+	text-decoration: none;
 
-    &:hover
-    { transition: 0.3s; background: rgba(80, 129, 251, 0.16); }
-    
-    &:active
-    { outline: none; border: 3px solid rgba(80, 129, 251, 0.24); }
+	&:hover
+	{ transition: 0.3s; background: rgba(80, 129, 251, 0.16); }
+	
+	&:active
+	{ outline: none; border: 3px solid rgba(80, 129, 251, 0.24); }
 
-    &:focus
-    { background: rgba(80, 129, 251, 0.24); }
+	&:focus
+	{ background: rgba(80, 129, 251, 0.24); }
 }
 
 /* start Configurações do projeto */
@@ -116,46 +116,149 @@
 .sec-codigo-edit .container-config-edit textarea::placeholder
 { color: #d1d1d1; }
 
-.sec-codigo-edit .container-config-edit .div-personaliza .linguagens
-{ width: 100%; }
+/* === inicio SELECT-BOX === */
+
+.sec-codigo-edit .container-config-edit .div-personaliza .select-box:nth-child(1)
+{
+	position: relative;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	cursor: pointer;
+
+	& .options-container 
+	{
+		max-height: 0;
+		transition: all 0.4s;
+		border-bottom-left-radius: 8px;
+		border-bottom-right-radius: 8px;
+		background: rgba(255, 255, 255, 0.16);
+		color: #f5f6fa;
+		overflow: hidden;
+		opacity: 0;
+		order: 1;
+	}
+
+	& .selecionado-box
+	{ 
+		display: flex; 
+		align-items: center; 
+		justify-content: space-between;
+		padding: .5rem 0 ;
+		border-radius: 8px;
+		background: rgba(255, 255, 255, 0.16);
+		color: #d1d1d1;
+		
+		font-size: 1.03em;
+		font-weight: 200;
+		transition: 0.3s;
+		order: 0;
+	
+		&:hover
+		{ background: rgba(255, 255, 255, 0.24); }
+
+		&:focus
+		{ background: #696969; }
+	}
+	
+	& .selecionado-box .fa-angle-down
+	{ left: 10rem; margin-right: 1rem; }
+	
+	& .selecionado
+	{ display: flex; align-items: center; }
+	
+	& .selecionado-box .fa.fa-angle-down
+	{ font-size: 1rem; transition: all 0.6s; }
+
+	& .options-container.active 
+	{
+		max-height: 240px;
+		margin-top: 54px;
+		overflow-y: scroll;
+		opacity: 1;
+	}
+
+	& .options-container.active + .selecionado-box .fa-angle-down
+	{ transform: rotate(540deg); color: #5081FB;}
+
+	& .options-container::-webkit-scrollbar 
+	{
+		width: 8px;
+		background: #0d141f;
+		border-radius: 0 0 8px 0;
+	}
+
+	& .options-container::-webkit-scrollbar-thumb 
+	{ background: #5081FB; border-radius: 0 0 8px 0; }
+
+	& .option,
+	.selecionado 
+	{ padding: 12px  24px; text-transform: capitalize;}
+
+	& .option:hover 
+	{ background: rgba(255, 255, 255, 0.24); }
+
+	& .option .radio 
+	{ display: none; }
+
+	/*=== BUSCA-BOX ===*/
+
+	& .busca-box input 
+	{
+		position: absolute;
+		width: 100%; height: 3.8em;
+		font-size: .9em;
+		padding: 0 16px;
+		border-radius: 8px 8px 0 0;
+		pointer-events: none;
+		transition: all 0.4s;
+		z-index: 100;
+		opacity: 0;
+	}
+
+	& .busca-box input:focus 
+	{ outline: none; }
+
+	& .options-container.active ~ .busca-box input 
+	{ opacity: 1; pointer-events: auto; }
+}
 
 .sec-codigo-edit .container-config-edit .outline
 {
-    width: calc(100% - 1rem);
-    height: 2.5rem;
-    margin: 1rem 0;
-    border: 1px solid #fff;
-    border-radius: 8px;
-    padding: .5rem;
-    cursor: pointer;
-    transition: 0.2s;
+	width: calc(100% - 1rem);
+	height: 2.5rem;
+	margin: 1rem 0;
+	border: 1px solid #fff;
+	border-radius: 8px;
+	padding: .5rem;
+	cursor: pointer;
+	transition: 0.2s;
 
-    &:hover { box-shadow: 0 0px 5px #fff; }
+	&:hover { box-shadow: 0 0px 5px #fff; }
 }
 
 .sec-codigo-edit .container-config-edit .outline .cor
 {
-    width: 100%; height: 100%;
-    background: #6BD1FF;
-    border-radius: 4px;
+	width: 100%; height: 100%;
+	background: #6BD1FF;
+	border-radius: 4px;
 }
 
 .sec-codigo-edit .container-config-edit .salvar-projeto
 {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-    background: #5081FB;
-    color: #010b16;
-    cursor: pointer;
-    font-weight: 500;
-    
-    &:hover
-    { transition: 0.3s; background: #7BA4FC; }
-    
-    &:active
-    { border: 3px solid rgba(80, 129, 251, 0.72); }
+	display: flex;
+	justify-content: center;
+	margin-top: 1rem;
+	background: #5081FB;
+	color: #010b16;
+	font-weight: 500;
+	
+	&:hover
+	{ transition: 0.3s; background: #7BA4FC; }
+	
+	&:active
+	{ border: 3px solid rgba(80, 129, 251, 0.72); }
 
-    &:focus
-    { background: #96B9FD; }
+	&:focus
+	{ background: #96B9FD; }
 }
