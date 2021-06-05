@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Text Editor</title>
   <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/dracula.css">
   <link rel="stylesheet" href="./assets/css/estilo.css">
 
   <script src="https://kit.fontawesome.com/23412c6a8d.js"></script>
-
 </head>
 
 <body>
@@ -79,13 +79,17 @@
       <div class="space-codeditor">
         <div class="backbox-edit-secondary">
           <div class="backbox-edit-main">
+            
             <div class="window-controls">
               <span></span><span></span>
             </div>
-            <textarea name="" id="editor"></textarea>
+            
+            <pre class="codigo-wrapper">
+              <code class="preview hljs" contenteditable="true" aria-label="editor"></code>
+            </pre>            
           </div>
         </div>
-        <button class="btn-verhighlight" href="">Visualizar com o highlight</button>
+        <button class="btn-verhighlight">Visualizar com o highlight</button>
       </div>
       <div class="container-config-edit">
         <h6>Seu projeto</h6>
@@ -95,54 +99,79 @@
         <h6>Persolnalização</h6>
         <div class="div-personaliza">
           <div class="select-box">
-            <div class="options-container">
+            <div class="options-container linguagem" name="linguagem" id="linguagem">
    
-               <option class="option">
-                  <input type="radio" class="radio" id="automobiles" name="category" />
-                  <label for="automobiles">html</label>
+               <option class="option" value="html">
+                  <input type="radio" class="radio" id="html" name="category" />
+                  <label for="html">html</label>
                </option>
    
-               <option class="option">
+               <option class="option" value="css">
                   <input type="radio" class="radio" id="css" name="category" />
                   <label for="css">css</label>
                </option>
    
-               <option class="option">
+               <option class="option" value="scss">
+                  <input type="radio" class="radio" id="scss" name="category" />
+                  <label for="scss">scss</label>
+               </option>
+   
+               <option class="option" value="sql">
+                  <input type="radio" class="radio" id="sql" name="category" />
+                  <label for="sql">sql</label>
+               </option>
+   
+               <option class="option" value="javascript">
                   <input type="radio" class="radio" id="javascript" name="category" />
                   <label for="javascript">javascript</label>
                </option>
    
-               <option class="option">
+               <option class="option" value="makefile">
+                  <input type="radio" class="radio" id="http" name="category" />
+                  <label for="http">http</label>
+               </option>
+   
+               <option class="option" value="ruby">
                   <input type="radio" class="radio" id="ruby" name="category" />
                   <label for="ruby">ruby</label>
                </option>
    
-               <option class="option">
+               <option class="option" value="swift">
+                  <input type="radio" class="radio" id="nginx" name="category" />
+                  <label for="nginx">nginx</label>
+               </option>
+   
+               <option class="option" value="php">
                   <input type="radio" class="radio" id="php" name="category" />
                   <label for="php">php</label>
                </option>
    
-               <option class="option">
+               <option class="option" value="java">
                   <input type="radio" class="radio" id="java" name="category" />
                   <label for="java">java</label>
                </option>
    
-               <option class="option">
-                  <input type="radio" class="radio" id="phyton" name="category" />
-                  <label for="phyton">phyton</label>
+               <option class="option" value="json">
+                  <input type="radio" class="radio" id="json" name="category" />
+                  <label for="json">json</label>
                </option>
    
-               <option class="option">
+               <option class="option" value="c">
                   <input type="radio" class="radio" id="c" name="category" />
                   <label for="c">c</label>
                </option>
    
-               <option class="option">
+               <option class="option" value="c#">
                   <input type="radio" class="radio" id="c#" name="category" />
                   <label for="c#">c#</label>
                </option>
+
+               <option class="option" value="vbnet">
+                  <input type="radio" class="radio" id="vbnet" name="category" />
+                  <label for="vbnet">Visaual Basic.NET</label>
+               </option>
                
-               <option class="option">
+               <option class="option" value="c++">
                  <input type="radio" class="radio" id="c++" name="category" />
                  <label for="c++">c++</label>
                 </option>
@@ -171,6 +200,8 @@
 
   <script src="./assets/js/jquery-3.5.1.js"></script>
   <script src="./assets/js/header-anime.js"></script>
+  <script src="./assets/js/highlight.min.js"></script>
+
   <script src="./assets/js/select-box.js"></script>
 </body>
 

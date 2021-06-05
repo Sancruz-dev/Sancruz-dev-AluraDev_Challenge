@@ -20,60 +20,67 @@
 	margin-bottom: 2rem;
 	border-radius: 8px;
 	background: #6BD1FF;
-}
 
-.sec-codigo-edit .space-codeditor .backbox-edit-secondary .backbox-edit-main
-{
-	width: 100%; height: 100%;
-	background: #141414;
-	border-radius: 8px; 
-	padding: 1rem 0;
-	box-shadow: 0 0 40px rgba(0,0,0,0.24);
-}
-
-.sec-codigo-edit .space-codeditor .backbox-edit-secondary .backbox-edit-main .window-controls
-{ height: 32px; margin-left: 1rem;}
-
-.sec-codigo-edit .space-codeditor .backbox-edit-secondary .backbox-edit-main .window-controls span::before
-{
-	width: 12px; height: 12px;
-	position: absolute;
-	content: '';
-	background: #FF5F56;
-	border-radius: 50%;
-}
-.sec-codigo-edit .space-codeditor .backbox-edit-secondary .backbox-edit-main .window-controls span::after
-{
-	position: absolute;
-	content: '';
-	background: #FFBD2E;
-	width: 12px;
-	height: 12px;
-	border-radius: 50%;
-	margin-left: 20px;
-}
-
-.sec-codigo-edit .space-codeditor .backbox-edit-secondary .backbox-edit-main .window-controls span:nth-child(1)::before
-{
-	width: 12px; height: 12px;
-	position: absolute;
-	content: '';
-	background: #27C93F;
-	border-radius: 50%;
-	margin-left: 40px;
+	& .backbox-edit-main
+	{
+		width: 100%; height: 100%;
+		background: #141414;
+		border-radius: 8px; 
+		padding: 1rem 0;
+		box-shadow: 0 0 40px rgba(0,0,0,0.24);
+	}
 	
-}
+	& .backbox-edit-main .window-controls
+	{ height: 32px; margin-left: 1rem;}
+	
+	& .backbox-edit-main .window-controls span::before
+	{
+		width: 12px; height: 12px;
+		position: absolute;
+		content: '';
+		background: #FF5F56;
+		border-radius: 50%;
+	}
+	& .backbox-edit-main .window-controls span::after
+	{
+		position: absolute;
+		content: '';
+		background: #FFBD2E;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		margin-left: 20px;
+	}
+	
+	& .backbox-edit-main .window-controls span:nth-child(1)::before
+	{
+		width: 12px; height: 12px;
+		position: absolute;
+		content: '';
+		background: #27C93F;
+		border-radius: 50%;
+		margin-left: 40px;
+		
+	}
+	
+	& .backbox-edit-main code
+	{
 
-.sec-codigo-edit .space-codeditor .backbox-edit-secondary .backbox-edit-main textarea
-{
-	width: 100%; height: calc(100% - 1rem);
-	font-family: 'Roboto Mono';
-	font-size: 14px;
-	line-height: 18.46px;
-	color: #d2d2d2;
-	background: transparent;
-	resize: none;
-	padding: 0 1rem;
+		display: block;
+	
+		border-radius: 7px;
+	
+		
+		height: calc(100% - 2rem);
+		font-family: 'Roboto Mono';
+		font-size: 14px;
+		line-height: 18.46px;
+		color: #d2d2d2;
+		padding: 10px;
+		outline: none;
+
+		white-space: pre;
+	}
 }
 
 .sec-codigo-edit .space-codeditor .btn-verhighlight

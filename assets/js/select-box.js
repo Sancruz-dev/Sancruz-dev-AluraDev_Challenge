@@ -38,3 +38,26 @@ const filterList = searchTerm => {
     }
   });
 };
+
+
+// === === === === === CONFIGURAÇÃO HIGHLIGHT 
+
+const codeArea = document.querySelector(".codigo-wrapper")
+const linguagem = document.querySelector(".options-container")
+const btn = document.querySelector(".btn-verhighlight")
+
+function mudaLinguagem() {
+    const codigo = codeArea.querySelector("code")
+    codeArea.innerHTML = `<code class="preview hljs ${linguagem.value}" contenteditable="true" aria-label="editor"></code>`
+    codeArea.firstChild.innerText = codigo.innerText
+}
+
+linguagem.addEventListener('change', ()=> {
+    mudaLinguagem()
+})
+
+btn.addEventListener('click', ()=> {
+    const codigo = codeArea.querySelector('code')
+    console.log(codigo);
+    hljs.highlightBlock(codigo)
+})
